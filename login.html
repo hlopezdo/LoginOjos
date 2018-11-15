@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MueveOjos</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">MueveOjos</a>
+            </div>
+        </div>
+    </nav>
+    <div class='center'>
+        <div class="cara">
+            <img src="cara.png">
+            <img id="ojoIzquierdo" src="ojo.png" class="ojoIzquierdo">
+            <img id="ojoDerecho" src="ojo.png" class="ojoDerecho">
+        </div>
+
+        <form class="formulario" action="">
+            <div class="container">
+                <label for="uname"><b>Usuario</b></label>
+                <input type="text" placeholder="Introduzca usuario" name="uname" maxlength="20" onkeydown="moverOjos(event)" onblur="volverMirada()" required>
+
+                <label for="psw"><b>Contraseña</b></label>
+                <input type="password" placeholder="Introduzca contraseña" name="psw" maxlength="20" onfocus="quitarMirada()" onblur="volverMirada()" required >
+
+                <button type="submit"><b>Aceptar</b></button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Recordarme
+                </label>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"> </script>
+</body>
+
+</html>
